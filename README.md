@@ -158,7 +158,7 @@ fig = plotter.plot_results(
 # Step 6: Display the plot
 plt.show()
 ```
-
+```
 ============================================================
               ✨ Cross Trade (SMA_25/SMA_75) ✨               
 ============================================================
@@ -189,8 +189,10 @@ plt.show()
   • Max Drawdown Duration: 849 days
   • Avg Drawdown Duration: 61.33 days
   • Annualized Volatility: 23.75%
-
+```
+```
 <img src="https://i.imgur.com/4qxr0dp.png" alt="Figure 2" width="900" height="600">
+```
 
 ### Optimizing Strategies
 
@@ -268,6 +270,7 @@ optimizer = Optimizer(
 )
 ```
 
+```
 print("\nRunning Optimization (Parallel)...")
 # Run optimization with parallel processing (adjust n_jobs as needed)
 results = optimizer.optimize(parallel=True, n_jobs=-1) # n_jobs=-1 uses all available cores
@@ -308,6 +311,7 @@ Best Metric Value (total_return_pct): 89.0500
 4. Params: {'short_window': 10, 'long_window': 150}, Metric: 19.4100
 5. Params: {'short_window': 20, 'long_window': 100}, Metric: 10.9600
 [Parallel(n_jobs=16)]: Done   9 out of   9 | elapsed:    9.7s finished
+```
 
 ## Examples
 
