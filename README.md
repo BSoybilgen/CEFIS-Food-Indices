@@ -99,9 +99,11 @@ fig = plotter.plot_results(
 
 # Step 4: Display the plot
 plt.show()
-
-<img src="https://i.imgur.com/JBpd0qo.png" alt="Figure 1" width="900" height="600">
 ```
+
+**Plot of Results**
+<img src="https://i.imgur.com/JBpd0qo.png" alt="Figure 1" width="900" height="600">
+
 
 ## Advanced Usage
 
@@ -158,6 +160,8 @@ fig = plotter.plot_results(
 # Step 6: Display the plot
 plt.show()
 ```
+
+**Output of Results**
 ```
 ============================================================
               ✨ Cross Trade (SMA_25/SMA_75) ✨               
@@ -190,9 +194,10 @@ plt.show()
   • Avg Drawdown Duration: 61.33 days
   • Annualized Volatility: 23.75%
 ```
-```
+
+**Plot of Results**
 <img src="https://i.imgur.com/4qxr0dp.png" alt="Figure 2" width="900" height="600">
-```
+
 
 ### Optimizing Strategies
 
