@@ -144,6 +144,21 @@ results, portfolio = backtester.run_cross_trade(
 # Step 4: Produce results
 backtester.print_results(results)
 
+# Step 5: Plot results
+plotter = BacktestPlotter()
+indicator_cols_to_plot = [f'SMA_{short_window}', f'SMA_{long_window}']
+fig = plotter.plot_results(
+    data_df=data,
+    history_df=portfolio,
+    price_col='Close',
+    indicator_cols=indicator_cols_to_plot, 
+    title=f"Cross Trade (Long Only) (SMA-{short_window} vs SMA-{long_window})"
+)
+
+# Step 6: Display the plot
+plt.show()
+```
+
 ============================================================
               ✨ Cross Trade (SMA_25/SMA_75) ✨               
 ============================================================
@@ -175,22 +190,7 @@ backtester.print_results(results)
   • Avg Drawdown Duration: 61.33 days
   • Annualized Volatility: 23.75%
 
-# Step 5: Plot results
-plotter = BacktestPlotter()
-indicator_cols_to_plot = [f'SMA_{short_window}', f'SMA_{long_window}']
-fig = plotter.plot_results(
-    data_df=data,
-    history_df=portfolio,
-    price_col='Close',
-    indicator_cols=indicator_cols_to_plot, 
-    title=f"Cross Trade (Long Only) (SMA-{short_window} vs SMA-{long_window})"
-)
-
-# Step 6: Display the plot
-plt.show()
-
 <img src="https://i.imgur.com/4qxr0dp.png" alt="Figure 2" width="900" height="600">
-```
 
 ### Optimizing Strategies
 
@@ -266,6 +266,7 @@ optimizer = Optimizer(
     maximize_metric=maximize_metric,
     constant_params=constant_params
 )
+```
 
 print("\nRunning Optimization (Parallel)...")
 # Run optimization with parallel processing (adjust n_jobs as needed)
@@ -307,7 +308,6 @@ Best Metric Value (total_return_pct): 89.0500
 4. Params: {'short_window': 10, 'long_window': 150}, Metric: 19.4100
 5. Params: {'short_window': 20, 'long_window': 100}, Metric: 10.9600
 [Parallel(n_jobs=16)]: Done   9 out of   9 | elapsed:    9.7s finished
-```
 
 ## Examples
 
